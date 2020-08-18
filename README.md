@@ -46,15 +46,15 @@ systemctl nginx reload
 9. Try to connect to dev2.itrm.ru server without client cert:
 ```
 curl --cacert /etc/nginx/ssl/ca.pem  -I https://dev2.itrm.ru
-```
 Answer: HTTP/2 400
+```
 10. Try to connect to dev2.itrm.ru server with unappropriate client cert:
 ```
 curl --cacert /etc/nginx/ssl/ca.pem --cert /etc/nginx/ssl/mtls.pem --key /etc/nginx/ssl/mtls-key.pem -I https://dev2.itrm.ru
-```
 Answer: HTTP/2 403
+```
 11. Try to connect to dev2.itrm.ru server with the appropriate client cert:
 ```
 curl --cacert /etc/nginx/ssl/ca.pem --cert /etc/nginx/ssl/client.pem --key /etc/nginx/ssl/client-key.pem -I https://dev2.itrm.ru
-```
 Answer: HTTP/2 200
+```
