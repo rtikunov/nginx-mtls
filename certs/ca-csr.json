@@ -1,0 +1,18 @@
+{
+  "CN": "mTLS",
+  "expiry": "43800h",
+  "key": {
+    "algo": "ecdsa",
+    "size": 256
+  },
+  "names": [
+    {
+      "C":  "RU",
+      "L":  "Moscow",
+      "O":  "ITRM",
+      "OU": "DevOps",
+      "ST": "Local"
+    }
+  ]
+}
+
